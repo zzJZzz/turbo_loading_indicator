@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["zzJZzz"]
   spec.email = ["zzjzzz.creator@gmail.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
+  spec.summary = "Set up loading indicator for Hotwire Turboframes without Stimulusjs"
   spec.description = "TODO: Write a longer description or delete this line."
   spec.homepage = "TODO: Put your gem's website or public repo URL here."
   spec.license = "MIT"
@@ -32,9 +32,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
 
-  # For more information and examples about making a new gem, check out our
-  # guide at: https://bundler.io/guides/creating_gem.html
+  spec.add_dependency "rails", ">= 7.0.7.2"
+
+  
 end

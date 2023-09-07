@@ -4,5 +4,5 @@ require_relative "turbo_loading_indicator/version"
 
 module TurboLoadingIndicator
   class Error < StandardError; end
-  # Your code goes here...
+  class Engine < ::Rails::Engine; end
 end

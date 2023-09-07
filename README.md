@@ -12,13 +12,42 @@ Install the gem and add to the application's Gemfile by executing:
 
     $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
 
+    $gem 'turbo_loading_indicator'
+
 If bundler is not being used to manage dependencies, install the gem by executing:
 
     $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
 
+Ensure your main stylesheet imports the gem's styles. Add the following line to your application's stylesheet (usually application.css or application.scss):
+
+/_ For application.css _/
+\*= require turbo_loading_indicator/loading
+
+OR
+
+// For application.scss
+@import "turbo_loading_indicator/loading";
+
+OR
+
+For Tailwind CSS Users:
+If you're using a dedicated Tailwind file like application.tailwind.css, you can include the styles there:
+
+@import "turbo_loading_indicator/loading";
+
 ## Usage
 
-TODO: Write usage instructions here
+To utilize the loading feature within a turbo frame, simply place the provided partial at the top of any turbo frame in your views:
+
+<%= turbo_frame_tag '{NAME OF FRAME}' do %>
+<%= render 'turbo_loading_indicator/loading' %>
+
+  <!-- Your other frame content goes here -->
+
+<% end %>
+
+Replace {NAME OF FRAME} with the desired name for your turbo frame.
+eg. <%= turbo_frame_tag 'my_frame' do %>
 
 ## Development
 
